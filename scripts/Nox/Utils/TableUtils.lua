@@ -38,4 +38,9 @@ end
 
 return {
   PrintTable = PrintTable,
+  engineHandlers = {
+    onFrame = function()
+      print("FRAME")
+    end
+  }
 }

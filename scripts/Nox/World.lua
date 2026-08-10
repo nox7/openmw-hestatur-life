@@ -24,5 +24,21 @@ end
 return {
   eventHandlers = {
     GiveFineScroll = GiveFineScroll
-  }
+  },
+  -- engineHandlers = {
+  --   onDropped = function(obj, actor, pos, rotation)
+  --     print(obj.position)
+  --     print(pos)
+  --     print(actor)
+  --     print(rotation:getAnglesZYX())
+  --   end,
+  --   onPlaced = function(obj, actor, pos, rotation)
+  --     print(obj.position)
+  --     print(pos)
+  --     print(actor)
+  --     print(rotation:getAnglesZYX())
+  --     --obj:remove()
+  --   end,
+  -- }
+
 }

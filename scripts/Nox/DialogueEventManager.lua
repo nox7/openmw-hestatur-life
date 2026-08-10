@@ -2,7 +2,8 @@ local core = require("openmw.core");
 local player = require("openmw.self");
 local UI = require("openmw.ui");
 local HestaturRecordKeeperDialogueEventHandler = require("scripts.Nox.Dialogue.HestaturRecordKeeper");
-local LogisticsManagerUI = require("scripts.Nox.UI.LogisticsManagerUI");
+local types = require('openmw.types')
+local storage = require("openmw.storage")
 
 return {
   eventHandlers = {
@@ -20,5 +21,13 @@ return {
     ReceivedFineScroll = function()
       UI.showMessage("Fine Parchment has been added to your inventory.");
     end,
+    Hit = function(e)
+      print(e.weaponType)
+    end,
+  },
+  engineHandlers = {
+    -- onViewportResized = function(width, height)
+    --   print("Viewport resized to: " .. width .. "x" .. height);
+    -- end
   }
 }

@@ -1,2 +1,4 @@
 GLOBAL: scripts/Nox/World.lua
 PLAYER: scripts/Nox/DialogueEventManager.lua
+PLAYER: scripts/Nox/UITests.lua
+GLOBAL: scripts/Nox/Global.lua
