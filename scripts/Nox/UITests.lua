@@ -1,7 +1,6 @@
 local ui2 = require("openmw.ui2")
 local util = require("openmw.util")
-local MorrowindWindow = require("scripts/Nox/UI/MorrowindWindow")
-local MorrowindScrollPanel = require("scripts/Nox/UI/MorrowindScrollPanel")
+local UITemplates = require("scripts/Nox/UITemplates")
 
 local colors = {
   util.color.rgb(1,0,0),
@@ -17,11 +16,11 @@ local layer = ui2.UILayer.new("TestLayer")
 layer.nativeLayer = "Windows"
 layer.nativeLayerPlacement = ui2.LayerPlacement.Above
 
-local mwWindow = MorrowindWindow("Shipping Logistics")
+local mwWindow = UITemplates.Morrowind.Window("Shipping Logistics")
 mwWindow.size = ui2.dimensions(0, 400, 0, 400)
 mwWindow.parent = layer
 
-local scrollPanel = MorrowindScrollPanel()
+local scrollPanel = UITemplates.Morrowind.ScrollPanel()
 scrollPanel.padding = util.vector4(4, 4, 4, 4)
 scrollPanel.parent = mwWindow:findFirstDescendantByName("content")
 
