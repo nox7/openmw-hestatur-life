@@ -1,6 +1,7 @@
 return {
   Morrowind = {
-    Window = require("Nox.UI.UITemplates.Morrowind.Window"),
-    ScrollPanel = require("Nox.UI.UITemplates.Morrowind.ScrollPanel"),
+    Window = require("scripts.Nox.UI.Morrowind.Window"),
+    ScrollPanel = require("scripts.Nox.UI.Morrowind.ScrollPanel"),
+    Dropdown = require("scripts.Nox.UI.Morrowind.Dropdown"),
   }
 }

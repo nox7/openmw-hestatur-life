@@ -382,7 +382,7 @@ return function(scrollbarWidth, scrollPixels)
       moved = setScrollOffset(horizontal, horizontal.offset - delta.y * scrollPixels)
     end
     if delta.x ~= 0 and horizontal.enabled then
-      moved = setScrollOffset(horizontal, horizontal.offset - delta.x * scrollPixels) or moved
+      moved = setScrollOffset(horizontal, horizontal.offset + delta.x * scrollPixels) or moved
     end
     if moved then
       mouseWheelEvent:stopPropagation()

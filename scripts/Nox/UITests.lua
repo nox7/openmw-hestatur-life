@@ -1,6 +1,6 @@
 local ui2 = require("openmw.ui2")
 local util = require("openmw.util")
-local UITemplates = require("scripts/Nox/UITemplates")
+local UITemplates = require("scripts.Nox.UI.UITemplates")
 
 local colors = {
   util.color.rgb(1,0,0),
@@ -26,18 +26,15 @@ scrollPanel.parent = mwWindow:findFirstDescendantByName("content")
 
 local scrollContent = scrollPanel:findFirstDescendantByName("content")
 
-local flex = ui2.Flex.new()
-flex.fitContent = true
-flex.gap = 10
-flex.wrap = true
-flex.maxSize = ui2.dimensions(1, 0, 0, 100000)
-flex.parent = scrollContent
+local dropdownButton, dropdownPanel = UITemplates.Morrowind.Dropdown()
+dropdownButton.parent = scrollContent
 
-for i = 1, 300 do
-  local image = ui2.Image.new()
-  image.size = ui2.dimensions(0, 100, 0, 100)
-  image.texture = ui2.texture({
-    path = "white",
-  })
-  image.parent = flex
+for i = 1, 20 do
+  local text = ui2.Text.new()
+  text.text = "Button " .. i
+  text.textSize = 14
+  text.padding = util.vector4(4, 4, 4, 4)
+  text.textColor = util.color.rgb(202/255,165/255,96/255)
+  text.fitContent = true
+  text.parent = dropdownPanel:findFirstDescendantByName("panelContent")
 end
